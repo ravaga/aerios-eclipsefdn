@@ -26,14 +26,14 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       dependabot_alerts_enabled: false,
       has_issues: true,
       has_discussions: true,
-      secret_scanning: true,
+      secret_scanning: "enabled",
       topics: [
         "aerios",
         "federator",
         "management",
         "NGSI-LD"
       ],
-      workflows: {
+      workflows+: {
         enabled: true
       }
     }
