@@ -231,5 +231,38 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('resources') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "Repository to host various resources related to the aeriOS project, including Docker Compose files, Helm charts, and installation resources.",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "main",
+      gh_pages_source_path: "/",
+      has_discussions: false,
+      has_wiki: false,
+      topics+: [
+        "aerios",
+        "docker-compose",
+        "documents",
+        "files",
+        "helm-charts",
+        "installation-resources",
+        "resources",
+        "resources-repository",
+        "static-files"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+    },
   ],
 }
