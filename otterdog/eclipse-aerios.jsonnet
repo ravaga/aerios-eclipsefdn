@@ -316,7 +316,7 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
         "aerios",
         "aerios-service-orchestration",
         "k8s-api",
-        "k8s-custom-resources"
+        "k8s-custom-resources",
         "low-level-orchestrator"
       ],
       workflows+: {
