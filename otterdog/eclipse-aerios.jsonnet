@@ -589,7 +589,8 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       allow_merge_commit: true,
       allow_update_branch: false,
       dependabot_alerts_enabled: false,
-      description: "Repository to host various resources related to the aeriOS project, including Docker Compose files, Helm charts, and installation resources.",
+      description: "Repository to host various 
+      related to the aeriOS project, including Docker Compose files, Helm charts, and installation resources.",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "main",
       gh_pages_source_path: "/",
@@ -618,6 +619,5 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
         },
       ],
     },
-
   ],
 }
