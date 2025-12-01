@@ -67,6 +67,42 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
         },
       ],
     },
+    orgs.newRepo('api-gateway') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "aeriOS Domain API Gateway configuration",
+      has_discussions: true,
+      homepage: "",
+      topics+: [
+        "aerios",
+        "api-gateway",
+        "krakend",
+        "rbac",
+        "security"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('benchmarking-tool') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "The aeriOS Benchmarking tool provides the measurement of IEs performance (CPU/RAM processing and bandwidth of network interfaces); and the calculation of some technical KPIs",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "aerios-management-framework",
+        "benchmarking",
+        "geekbench",
+        "iperf",
+        "kpi-measurement"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('federator') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -76,12 +112,48 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       homepage: "",
       topics+: [
         "aerios",
+        "aerios-management-framework",
         "cloud-edge-continuum",
         "domain",
         "edge-computing",
         "federator",
         "management",
         "ngsi-ld"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('embedded-analytics-tool') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "The aeriOS Federator serves as a management service responsible for controlling the establishment and maintenance of federation mechanisms among the multiple aeriOS domains that form the Cloud-Edge-IoT continuum",
+      has_discussions: true,
+      homepage: "",
+      topics+: [
+        "aerios",
+        "aerios-faas-template",
+        "faas",
+        "openfaas",
+        "serverless"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('entrypoint-balancer') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "The aeriOS Entrypoint Balancer distributes the orchestration requests received from the Management Portal among the different High-Level Orchestrator (HLO) instances deployed in the aeriOS domains",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "aerios-management-framework",
+        "entrypoint-balancer",
+        "improved-weighted-least-connections",
+        "load-balancer"
       ],
       workflows+: {
         default_workflow_permissions: "write",
@@ -97,6 +169,7 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       topics+: [
         "aerios",
         "ai",
+        "aerios-service-orchestration",
         "federation",
         "hlo",
         "orchestration"
@@ -114,6 +187,7 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       has_wiki: false,
       topics+: [
         "aerios",
+        "aerios-service-orchestration",
         "federation",
         "hlo",
         "orchestration"
@@ -131,9 +205,30 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       has_wiki: false,
       topics+: [
         "aerios",
+        "aerios-service-orchestration",
         "federation",
         "hlo",
         "orchestration"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('hlo-explainability-service') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "AI Explainability Service for Task Allocation Models, specially focused on the aeriOS High-Level Orchestrator (HLO) models",
+      has_discussions: true,
+      has_wiki: false,
+      topics+: [
+        "aerios",
+        "aerios-service-orchestration",
+        "explainability",
+        "hlo",
+        "orchestration",
+        "task-allocation",
+        "xai"
       ],
       workflows+: {
         default_workflow_permissions: "write",
@@ -148,11 +243,135 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       has_wiki: false,
       topics+: [
         "aerios",
+        "aerios-service-orchestration",
         "federation",
         "hlo",
         "ngsi-ld",
         "orchestration",
         "tosca"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('idm') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "aeriOS Identity Manager (IdM) based on Keycloak and LDAP",
+      has_discussions: true,
+      homepage: "",
+      topics+: [
+        "aerios",
+        "idm",
+        "keycloak",
+        "ldap",
+        "rbac",
+        "security"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('iota-tangle') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "Required files and configurations to bootstrap and operate an IOTA Tangle for trustworthiness management in aeriOS",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "iota-tangle",
+        "trustworthiness"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('iota-tangle-peerer') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "Initializes IOTA tangle peering between the K8s nodes of an aeriOS K8s domain",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "iota-node-peering",
+        "iota-tangle",
+        "k8s-node",
+        "trustworthiness"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('llo-api') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "API to manage the Low-Level Orchestrators (LLOs) custom resources (CRs) in Kubernetes clusters",
+      has_discussions: true,
+      homepage: "",
+      topics+: [
+        "aerios",
+        "aerios-service-orchestration",
+        "k8s-api",
+        "k8s-custom-resources",
+        "low-level-orchestrator"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('llo-k8s') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "K8s Operator developed using Operator-SDK to deploy service components in Infrastructure Elements of Kubernetes type",
+      has_discussions: true,
+      homepage: "",
+      topics+: [
+        "aerios",
+        "aerios-service-orchestration",
+        "k8s-operator",
+        "low-level-orchestrator",
+        "service-deployment",
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('llo-docker-operator') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "K8s Operator developed using Operator-SDK to deploy service components in Infrastructure Elements of Docker type",
+      has_discussions: true,
+      homepage: "",
+      topics+: [
+        "aerios",
+        "aerios-service-orchestration",
+        "k8s-operator",
+        "low-level-orchestrator",
+        "service-deployment",
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('llo-docker-controller') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "A local controller that must be deployed in each IE that uses Docker as its container management framework to handle and execute the actions requested by the LLO Docker Operator, which is deployed in a K8s cluster",
+      has_discussions: true,
+      homepage: "",
+      topics+: [
+        "aerios",
+        "aerios-service-orchestration",
+        "docker-controller",
+        "low-level-orchestrator",
+        "service-deployment",
       ],
       workflows+: {
         default_workflow_permissions: "write",
@@ -167,6 +386,7 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       has_wiki: false,
       topics+: [
         "aerios",
+        "aerios-management-framework",
         "backend",
         "management",
         "management-portal",
@@ -184,10 +404,30 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       has_discussions: true,
       topics+: [
         "aerios",
+        "aerios-management-framework",
         "frontend",
         "management",
         "management-portal",
         "webapp"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('self-api') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "API Gateway for the aeriOS Self-* toolsuite",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "api-gateway",
+        "computing-node",
+        "infrastructure-element",
+        "self",
+        "self-api",
+        "self-capabilities"
       ],
       workflows+: {
         default_workflow_permissions: "write",
@@ -201,9 +441,11 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       has_discussions: true,
       topics+: [
         "aerios",
+        "computing-node",
         "infrastructure-element",
-        "node",
+        "ngsi-ld",
         "self",
+        "self-capabilities",
         "self-awareness"
       ],
       workflows+: {
@@ -220,12 +462,124 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       topics+: [
         "aerios",
         "alerts",
+        "computing-node",
         "infrastructure-element",
-        "node",
         "orchestration",
         "rules",
         "self",
+        "self-capabilities",
         "self-orchestrator"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('self-healing') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "This component from the aeriOS Self-* toolsuite crystallizes the capability of autonomously recovering affected parts of the system at both hardware and software levels caused by failures or abnormal states",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "computing-node",
+        "infrastructure-element",
+        "self",
+        "self-capabilities",
+        "self-healing"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('self-optimization') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "This component from the aeriOS Self-* toolsuite is responsible for analysing the IEs states in order to propose possible optimizations within the system",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "computing-node",
+        "infrastructure-element",
+        "self",
+        "self-adaptation",
+        "self-capabilities",
+        "self-optimization"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('self-scaling') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "This component from the aeriOS Self-* is able to horizontally scale (up or down) the resources devoted to a specific service (inside a node) in a dynamic fashion, based on time series inference and custom logic",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "horizontal-pod-autoscaler",
+        "infrastructure-element",
+        "k8s-node",
+        "self",
+        "self-capabilities",
+        "self-scaling"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('self-security') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "This component from the aeriOS Self-* toolsuite checks network interfaces and analyses traffic to detect possible security threats",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "computing-node",
+        "infrastructure-element",
+        "network-security",
+        "self",
+        "self-capabilities",
+        "self-security"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('service-overlay-network') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "Overlay network to interconnect deployed aeriOS service components across multiple Infrastructure Elements",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "aerios-service-orchestration",
+        "distributed-networking",
+        "overlay-network",
+        "service-mesh",
+        "wireguard"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('trust-manager') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "A module for monitoring and evaluating the trustworthiness of an Infrastructure Element of the Cloud-Edge-IoT continuum",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "computing-node",
+        "infrastructure-element",
+        "trustworthiness",
+        "trust-algorithm",
+        "trust-score"
       ],
       workflows+: {
         default_workflow_permissions: "write",
@@ -235,7 +589,8 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       allow_merge_commit: true,
       allow_update_branch: false,
       dependabot_alerts_enabled: false,
-      description: "Repository to host various resources related to the aeriOS project, including Docker Compose files, Helm charts, and installation resources.",
+      description: "Repository to host various 
+      related to the aeriOS project, including Docker Compose files, Helm charts, and installation resources.",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "main",
       gh_pages_source_path: "/",
