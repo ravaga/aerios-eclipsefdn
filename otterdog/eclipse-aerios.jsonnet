@@ -288,6 +288,23 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('iota-messages-api') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      dependabot_alerts_enabled: false,
+      description: "REST API to insert messages into an IOTA Tangle",
+      has_discussions: true,
+      topics+: [
+        "aerios",
+        "iota-messages-api",
+        "iota-tangle",
+        "rest-api",
+        "trustworthiness"
+      ],
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('iota-tangle-peerer') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -589,7 +606,7 @@ orgs.newOrg('iot.aerios', 'eclipse-aerios') {
       allow_merge_commit: true,
       allow_update_branch: false,
       dependabot_alerts_enabled: false,
-      description: "Repository to host various related to the aeriOS project, including Docker Compose files, Helm charts, and installation resources.",
+      description: "Repository to host various resources related to the aeriOS project, including Docker Compose files, Helm charts and more installation resources",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "main",
       gh_pages_source_path: "/",
